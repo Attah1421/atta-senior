@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reflective Practice</title>
+  <style>
+    /* ---------- GENERAL STYLING ---------- */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ecf0f1;
+      display: flex;
+    }
+
+    /* ---------- SIDEBAR ---------- */
+    .sidebar {
+      width: 260px;
+      background: linear-gradient(180deg, #2c3e50, #1a252f);
+      color: white;
+      height: 100vh;
+      position: fixed;
+      padding: 20px 0;
+      box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .sidebar h2 {
+      text-align: center;
+      font-size: 1.5em;
+      margin-bottom: 20px;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+      padding-bottom: 10px;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      margin: 5px 0;
+    }
+
+    .sidebar ul li a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      font-size: 1.05em;
+      padding: 10px 20px;
+      border-radius: 6px;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .sidebar ul li a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: translateX(4px);
+    }
+
+    /* ---------- MAIN CONTENT ---------- */
+    .content {
+      margin-left: 280px;
+      padding: 30px;
+      width: calc(100% - 280px);
+      background-color: white;
+      min-height: 100vh;
+      box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .content h1 {
+      color: #2c3e50;
+      border-bottom: 3px solid #2c3e50;
+      padding-bottom: 10px;
+      font-size: 2.3em;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .content h2 {
+      color: #34495e;
+      margin-top: 30px;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .content h2.zoomed {
+      transform: scale(1.2);
+      color: #2980b9;
+    }
+
+    .content p, 
+    .content ul, 
+    .content ol {
+      line-height: 1.6;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .content ul, .content ol {
+      padding-left: 20px;
+    }
+
+    .content ul li, 
+    .content ol li {
+      margin-bottom: 8px;
+    }
+
+    /* ---------- NAVIGATION BUTTONS ---------- */
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 40px;
+    }
+
+    .nav-buttons button {
+      padding: 12px 24px;
+      background-color: #2980b9;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.05em;
+      cursor: pointer;
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+
+    .nav-buttons button:hover {
+      background-color: #1f6391;
+      transform: scale(1.12);
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar Navigation -->
+  <div class="sidebar">
+    <h2>Navigation</h2>
+    <ul>
+      <li><a href="#reflective-practice" onclick="zoomSection('reflective-practice')">Reflective Practice</a></li>
+      <li><a href="#coverage" onclick="zoomSection('coverage')">Coverage</a></li>
+      <li><a href="#rpk" onclick="zoomSection('rpk')">Relevant Previous Knowledge</a></li>
+      <li><a href="#objectives" onclick="zoomSection('objectives')">Objectives</a></li>
+      <li><a href="#activities" onclick="zoomSection('activities')">Activities</a></li>
+      <li><a href="#core-points" onclick="zoomSection('core-points')">Core Points</a></li>
+      <li><a href="#strengths" onclick="zoomSection('strengths')">Strengths</a></li>
+      <li><a href="#weaknesses" onclick="zoomSection('weaknesses')">Weaknesses</a></li>
+      <li><a href="#innovative-solution" onclick="zoomSection('innovative-solution')">Innovative Solution</a></li>
+      <li><a href="#remarks" onclick="zoomSection('remarks')">Remarks</a></li>
+      <li><a href="#insights" onclick="zoomSection('insights')">Insights Gained</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <h1>Reflective Practice</h1>
+
+    <section id="reflective-practice">
+      <h2>Reflective Practice</h2>
+      <p>Reflective practice is an active process that involves observing your own teaching experiences...</p>
+    </section>
+
+    <section id="coverage">
+      <h2>Coverage</h2>
+      <ul>
+        <li><strong>School of Practice:</strong> Dadease Agric. Senior High School (DASHS)</li>
+        <li><strong>Subject Taught:</strong> Social Studies</li>
+        <li><strong>Topic:</strong> Leadership and Followership</li>
+        <li><strong>Date:</strong> [Insert Date]</li>
+        <li><strong>Class:</strong> 2 Science</li>
+        <li><strong>Average Age:</strong> 17</li>
+        <li><strong>Duration:</strong> One Hour</li>
+        <li><strong>Reference:</strong> Current Social Studies Textbook by Michael Aketewah</li>
+      </ul>
+    </section>
+
+    <section id="rpk">
+      <h2>Relevant Previous Knowledge (R.P.K.)</h2>
+      <p>Students were familiar with the role of their members of parliament.</p>
+    </section>
+
+    <section id="objectives">
+      <h2>Objectives</h2>
+      <p>By the end of the lesson, students will be able to:</p>
+      <ul>
+        <li>Define Leadership</li>
+        <li>State three ways by which individuals can become a leader</li>
+        <li>Mention two types of leadership style</li>
+        <li>Discuss three characteristics of effective leadership</li>
+      </ul>
+    </section>
+
+    <section id="activities">
+      <h2>Activities</h2>
+      <p><strong>Introduction:</strong> Through Q&A, teacher guides learners to brainstorm the purposes of election.</p>
+      <ol>
+        <li>Discuss the meaning of leadership.</li>
+        <li>Brainstorm ways by which an individual can become a leader.</li>
+        <li>Write ceiling points on the board.</li>
+        <li>Discuss characteristics of effective leadership.</li>
+      </ol>
+    </section>
+
+    <section id="core-points">
+      <h2>Core Points</h2>
+      <p><strong>Leadership:</strong> The ability to guide and influence people towards a goal.</p>
+      <p><strong>Types of Leadership:</strong></p>
+      <ul>
+        <li>Autocratic</li>
+        <li>Democratic</li>
+        <li>Laissez-faire</li>
+        <li>Paternalistic</li>
+      </ul>
+    </section>
+
+    <section id="strengths">
+      <h2>Strengths of the Lesson</h2>
+      <ul>
+        <li>Lesson objectives clearly stated</li>
+        <li>Orderly presentation</li>
+        <li>Good classroom management</li>
+        <li>Excellent use of teaching materials</li>
+      </ul>
+    </section>
+
+    <section id="weaknesses">
+      <h2>Weaknesses of the Lesson</h2>
+      <ul>
+        <li>Student involvement could have been improved</li>
+      </ul>
+    </section>
+
+    <section id="innovative-solution">
+      <h2>Innovative Solution</h2>
+      <p>Use more examples and diverse approaches such as group discussions...</p>
+    </section>
+
+    <section id="remarks">
+      <h2>Remarks</h2>
+      <p>The lesson was successful, as most learners performed very well.</p>
+    </section>
+
+    <section id="insights">
+      <h2>Insights Gained</h2>
+      <p>Involving students in the teaching process is one of the best strategies...</p>
+    </section>
+
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+      <button onclick="window.location.href='previouspage.html'">⬅ Back</button>
+      <button onclick="window.location.href='index.html'">🏠 Home</button>
+      <button onclick="window.location.href='nextpage.html'">Next ➡</button>
+    </div>
+  </div>
+
+  <script>
+    function zoomSection(sectionId) {
+      document.querySelectorAll('.content h2').forEach(h2 => {
+        h2.classList.remove('zoomed');
+      });
+      const targetSection = document.getElementById(sectionId);
+      if (targetSection) {
+        const targetH2 = targetSection.querySelector('h2');
+        if (targetH2) {
+          targetH2.classList.add('zoomed');
+          setTimeout(() => {
+            targetH2.classList.remove('zoomed');
+          }, 1000);
+        }
+      }
+    }
+  </script>
+</body>
+</html>

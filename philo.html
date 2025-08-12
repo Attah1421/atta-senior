@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(90deg, #2c3e50, #3b4c66);
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            position: relative;
+        }
+        .logo {
+            width: 70px;
+            height: auto;
+            position: absolute;
+            left: 40px;
+            top: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .logo:hover {
+            transform: scale(1.1);
+        }
+        .header-title h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+        nav {
+            background-color: #3b4c66;
+            width: 100%;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            opacity: 0.97;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 12px 24px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #1abc9c;
+            color: white;
+        }
+        nav a.active {
+            background-color: #1abc9c;
+            border: 2px solid #16a085;
+            font-weight: 600;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+        }
+        h2 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            border-left: 4px solid #1abc9c;
+            padding-left: 15px;
+        }
+        h3 {
+            color: #333;
+            font-size: 1.4rem;
+            margin-top: 30px;
+            font-weight: 600;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        h3.active {
+            background-color: rgba(26, 188, 156, 0.1);
+        }
+        p, ul {
+            line-height: 1.7;
+            font-size: 1rem;
+            color: #333;
+            padding: 0 10px;
+        }
+        ul {
+            list-style-type: circle;
+            padding-left: 30px;
+        }
+        .pagination {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .pagination a {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            transition: background-color 0.3s ease;
+        }
+        .pagination a:hover {
+            background-color: #1abc9c;
+        }
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            transition: transform 0.3s ease;
+        }
+        .hamburger:hover {
+            transform: rotate(90deg);
+        }
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 20px;
+            }
+            .logo {
+                width: 50px;
+                left: 20px;
+                top: 15px;
+            }
+            .header-title h1 {
+                font-size: 1.8rem;
+            }
+            .hamburger {
+                display: block;
+            }
+            nav {
+                display: none;
+                flex-direction: column;
+                padding: 15px;
+                gap: 15px;
+                background-color: #3b4c66;
+            }
+            nav.active {
+                display: flex;
+            }
+            nav a {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+            .container {
+                margin: 20px;
+                padding: 20px;
+            }
+            .pagination a {
+                padding: 8px 15px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="R (1).png" alt="Logo" class="logo">
+        <div class="header-title">
+            <h1>MY TEACHING PHILOSOPHY</h1>
+        </div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </header>
+    <nav id="nav-menu" class="nav-menu">
+        <a href="#introduction">Introduction</a>
+        <a href="#statement">Statement of My Teaching Philosophy</a>
+        <a href="#implementation">Implementation</a>
+        <a href="#validity">Validity</a>
+    </nav>
+    <div class="container">
+        <section id="teaching-philosophy">
+            <h2>Teaching Philosophy</h2>
+            <h3 id="introduction">Introduction</h3>
+            <p>Teaching philosophy is a reflective articulation of one’s beliefs regarding teaching and learning. It can also be described as a framework through which educators examine their values related to teaching (Harrison, 1990). Essentially, a teaching philosophy outlines a teacher's convictions and details how these beliefs will be put into practice in the classroom to promote effective teaching and learning outcomes.</p>
+            <h3 id="statement">Statement of My Teaching Philosophy</h3>
+            <p>As an aspiring teacher, I firmly believe that “students learn best when they are actively engaged in the teaching and learning process.” This conviction shapes my teaching philosophy, which emphasizes a learner-centered approach that prioritizes the unique needs and learning styles of each student. I encourage students to actively participate in their education, as this engagement significantly enhances their ability to comprehend the material. Utilizing a variety of illustrations, examples, and appropriate teaching resources, I aim to create a dynamic classroom environment where learning is far from abstract or passive.</p>
+            <p>There is a wise Chinese saying that goes, “I see and I remember, I hear and I forget, I do and I understand.” This adage underscores the importance of a hands-on approach, demonstrating that students are more likely to internalize and understand concepts when they are actively involved in the learning process.</p>
+            <h3 id="implementation">Implementation</h3>
+            <p>Every student's contribution is vital to the teaching and learning process, playing a crucial role in lesson delivery. To foster this, I encouraged students to engage in extensive reading to uncover knowledge independently. I implemented a question-and-answer approach, ensuring that questions were evenly distributed and that I gave equal attention to each student’s input and ideas. I also urged students to respect and value the perspectives of their peers, discouraging any mockery of answers that might be deemed incorrect. I emphasized that no one, not even myself, possesses all knowledge. Keeping this in mind, every student felt empowered to share their thoughts during discussions, which greatly enhanced the classroom environment.</p>
+            <h3 id="validity">Validity</h3>
+            <p>My teaching philosophy is grounded in the belief that my approach is the most effective and appropriate way to facilitate learning. I am committed to ensuring that every student, regardless of race, religion, socioeconomic status, or any other factor, has an equal opportunity to learn. I view all students as equals, as they come to school to receive an education. I believe that students learn best through active collaboration with their peers, which fosters teamwork. My classroom management plan is designed to instill self-discipline in students, empowering them to take responsibility for their own behavior. To validate and implement my teaching philosophy, I employ techniques such as discussions and the equitable distribution of questions, ensuring that every student is actively engaged in the learning process.</p>
+        </section>
+        <section class="pagination">
+            <a href="#validity">Previous Section</a>
+            <a href="index.html">Back to Index Page</a>
+            <a href="#introduction">Next Section</a>
+        </section>
+    </div>
+    <script>
+        // Smooth scrolling for nav and pagination links (excluding external links)
+        document.querySelectorAll('nav a, .pagination a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 120,
+                        behavior: 'smooth'
+                    });
+                    // Set active class for nav links
+                    if (this.parentElement.classList.contains('nav-menu')) {
+                        document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+                        this.classList.add('active');
+                    }
+                    // Highlight active section heading
+                    document.querySelectorAll('h3').forEach(h3 => h3.classList.remove('active'));
+                    targetElement.classList.add('active');
+                }
+                // External links (e.g., home.html) proceed without preventDefault
+            });
+        });
+
+        // Highlight active section on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section h3');
+            let currentSection = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 120;
+                if (window.scrollY >= sectionTop) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            document.querySelectorAll('nav a').forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href').substring(1) === currentSection) {
+                    a.classList.add('active');
+                }
+            });
+            document.querySelectorAll('h3').forEach(h3 => {
+                h3.classList.remove('active');
+                if (h3.getAttribute('id') === currentSection) {
+                    h3.classList.add('active');
+                }
+            });
+        });
+
+        // Toggle mobile menu
+        function toggleMenu() {
+            const nav = document.getElementById('nav-menu');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

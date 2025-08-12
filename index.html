@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #1a3c2b;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      display: flex;
+      width: 90%;
+      max-width: 1000px;
+      height: 80vh;
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .sidebar {
+      width: 30%;
+      background-color: #27ae60;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .sidebar h2 {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    .sidebar a {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #219653;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      text-align: center;
+      transition: background-color 0.3s;
+    }
+    .sidebar a:hover {
+      background-color: #1e8449;
+    }
+    .main-content {
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      position: relative;
+    }
+    .profile {
+      text-align: center;
+    }
+    /* Center the image */
+    .profile-img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 5px solid #219653;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: flex;             
+      justify-content: center;   
+      align-items: center;       
+      margin-left: auto;         
+      margin-right: auto;
+      transition: transform 0.3s ease; /* Smooth growth effect */
+    }
+    .profile-img:hover {
+      transform: scale(1.1); /* Grow by 10% on hover */
+    }
+    .profile-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .profile-name {
+      font-size: 2.5em;
+      margin: 0;
+      color: #27ae60;
+      margin-bottom: 10px;
+      align-self: flex-start;
+      margin-left: 20px;
+    }
+    .profile-title {
+      font-size: 1.3em;
+      color: #219653;
+      margin: 5px 0 25px 20px;
+      font-weight: 400;
+      align-self: flex-start;
+    }
+    .contact-btn, .about-btn {
+      padding: 12px 25px;
+      background-color: #219653;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      margin-top: 10px;
+      align-self: center;
+    }
+    .contact-btn:hover, .about-btn:hover {
+      background-color: #1e8449;
+    }
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        height: auto;
+        width: 95%;
+      }
+      .sidebar {
+        width: 100%;
+      }
+      .main-content {
+        width: 100%;
+      }
+      .profile-img {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .profile-name, .profile-title {
+        margin-left: 0;
+        align-self: center;
+      }
+      .contact-btn, .about-btn {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h2>CONTENT</h2>
+      <a href="philo.html">Teaching Philosophy</a>
+      <a href="reflective.html">Reflective Practice</a>
+      <a href="cv.html">Curriculum Vitae</a>
+      <a href="#">Internship Record Book</a>
+      <a href="#">Lesson Notes</a>
+      <a href="#">Pictures & Videos</a>
+      <a href="#">TLM's</a>
+      <a href="#">Exercise & Test</a>
+    </div>
+    <div class="main-content">
+      <div class="profile">
+        <div class="profile-img">
+          <img src="photo_2025-08-12_16-53-31.jpg" alt="Profile" />
+        </div>
+        <h1 class="profile-name">ATTAH PEPRAH SNR</h1>
+        <div class="profile-title">GRAPHIC DESIGNER & I.T TUTOR</div>
+        <a href="#" class="contact-btn">Contact Us</a>
+        <a href="#" class="about-btn">About Me</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
