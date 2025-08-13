@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Examination and Marking Scheme</title>
+  <title>Internship Record Book</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -70,7 +70,7 @@
       transform: scale(1.05);
     }
 
-    .back-link {
+    .back-link, .next-link {
       display: inline-block;
       background-color: #2E4F4F;
       color: #34C759;
@@ -82,19 +82,16 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
 
-    .back-link:hover {
+    .back-link:hover, .next-link:hover {
       background-color: #3A5F5F;
       transform: scale(1.04);
     }
 
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      font-size: 0.95rem;
-      color: #E0E0E0;
-      background-color: #1A3C34;
-      border-top: 1px solid #34C759;
-      margin-top: 70px;
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
     }
 
     .slideshow-container {
@@ -196,59 +193,89 @@
         font-size: 0.9rem;
         padding: 6px 10px;
       }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>EXAMINATION AND MARKING SCHEME</h1>
+    <h1>INTERNSHIP RECORD BOOK</h1>
   </header>
 
   <div class="container">
     <h2>Available Images</h2>
 
     <div class="button-group">
-      <button class="file-link" onclick="showSlideshow('exam')">View Examination</button>
-      <button class="file-link" onclick="showSlideshow('scheme')">View Marking Scheme</button>
+      <button class="file-link" onclick="showSlideshow('scheme')">View Record Book</button>
     </div>
 
-    <!-- Examination Slideshow -->
-    <div class="slideshow-container" id="examSlideshow">
-      <img class="slide exam-slide" src="exam 1.jpg" alt="Examination Slide 1">
-      <img class="slide exam-slide" src="exam 2.jpg" alt="Examination Slide 2">
-      <button class="prev" onclick="changeSlide('exam', -1)">&#10094;</button>
-      <button class="next" onclick="changeSlide('exam', 1)">&#10095;</button>
-    </div>
-    <div class="slide-selector" id="examSlideSelector" style="display: none;">
-      <label for="examSlideNumber">Select Examination Slide:</label>
-      <select id="examSlideNumber" onchange="jumpToSlide('exam', this.value)">
-        <option value="0">Slide 1</option>
-        <option value="1">Slide 2</option>
-      </select>
-    </div>
-
-    <!-- Marking Scheme Slideshow -->
+    <!-- Record Book Slideshow -->
     <div class="slideshow-container" id="schemeSlideshow">
-      <img class="slide scheme-slide" src="FINAL MARKING SCHEME (AutoRecovered).jpg" alt="Marking Scheme Slide 1">
-      <img class="slide scheme-slide" src="FINAL MARKING SCHEME (AutoRecovered)-2.jpg" alt="Marking Scheme Slide 2">
-      <img class="slide scheme-slide" src="FINAL MARKING SCHEME (AutoRecovered)-3.jpg" alt="Marking Scheme Slide 3">
-      <img class="slide scheme-slide" src="FINAL MARKING SCHEME (AutoRecovered)-4.jpg" alt="Marking Scheme Slide 4">
+      <img class="slide scheme-slide" src="photo_1_2025-08-13_05-29-59.jpg" alt="Record Book Slide 1">
+      <img class="slide scheme-slide" src="photo_2_2025-08-13_05-29-59.jpg" alt="Record Book Slide 2">
+      <img class="slide scheme-slide" src="photo_3_2025-08-13_05-29-59.jpg" alt="Record Book Slide 3">
+      <img class="slide scheme-slide" src="photo_4_2025-08-13_05-29-59.jpg" alt="Record Book Slide 4">
+      <img class="slide scheme-slide" src="photo_5_2025-08-13_05-29-59.jpg" alt="Record Book Slide 5">
+      <img class="slide scheme-slide" src="photo_6_2025-08-13_05-29-59.jpg" alt="Record Book Slide 6">
+      <img class="slide scheme-slide" src="photo_7_2025-08-13_05-29-59.jpg" alt="Record Book Slide 7">
+      <img class="slide scheme-slide" src="photo_8_2025-08-13_05-29-59.jpg" alt="Record Book Slide 8">
+      <img class="slide scheme-slide" src="photo_9_2025-08-13_05-29-59.jpg" alt="Record Book Slide 9">
+      <img class="slide scheme-slide" src="photo_10_2025-08-13_05-29-59.jpg" alt="Record Book Slide 10">
+      <img class="slide scheme-slide" src="photo_11_2025-08-13_05-29-59.jpg" alt="Record Book Slide 11">
+      <img class="slide scheme-slide" src="photo_12_2025-08-13_05-29-59.jpg" alt="Record Book Slide 12">
+      <img class="slide scheme-slide" src="photo_13_2025-08-13_05-29-59.jpg" alt="Record Book Slide 13">
+      <img class="slide scheme-slide" src="photo_14_2025-08-13_05-29-59.jpg" alt="Record Book Slide 14">
+      <img class="slide scheme-slide" src="photo_15_2025-08-13_05-29-59.jpg" alt="Record Book Slide 15">
+      <img class="slide scheme-slide" src="photo_16_2025-08-13_05-29-59.jpg" alt="Record Book Slide 16">
+      <img class="slide scheme-slide" src="photo_17_2025-08-13_05-29-59.jpg" alt="Record Book Slide 17">
+      <img class="slide scheme-slide" src="photo_18_2025-08-13_05-29-59.jpg" alt="Record Book Slide 18">
+      <img class="slide scheme-slide" src="photo_19_2025-08-13_05-29-59.jpg" alt="Record Book Slide 19">
+      <img class="slide scheme-slide" src="photo_20_2025-08-13_05-29-59.jpg" alt="Record Book Slide 20">
+      <img class="slide scheme-slide" src="photo_21_2025-08-13_05-29-59.jpg" alt="Record Book Slide 21">
+      <img class="slide scheme-slide" src="photo_22_2025-08-13_05-29-59.jpg" alt="Record Book Slide 22">
+      <img class="slide scheme-slide" src="photo_23_2025-08-13_05-29-59.jpg" alt="Record Book Slide 23">
       <button class="prev" onclick="changeSlide('scheme', -1)">&#10094;</button>
       <button class="next" onclick="changeSlide('scheme', 1)">&#10095;</button>
     </div>
     <div class="slide-selector" id="schemeSlideSelector" style="display: none;">
-      <label for="schemeSlideNumber">Select Marking Scheme Slide:</label>
+      <label for="schemeSlideNumber">Select Record Book Slide:</label>
       <select id="schemeSlideNumber" onchange="jumpToSlide('scheme', this.value)">
         <option value="0">Slide 1</option>
         <option value="1">Slide 2</option>
         <option value="2">Slide 3</option>
         <option value="3">Slide 4</option>
+        <option value="4">Slide 5</option>
+        <option value="5">Slide 6</option>
+        <option value="6">Slide 7</option>
+        <option value="7">Slide 8</option>
+        <option value="8">Slide 9</option>
+        <option value="9">Slide 10</option>
+        <option value="10">Slide 11</option>
+        <option value="11">Slide 12</option>
+        <option value="12">Slide 13</option>
+        <option value="13">Slide 14</option>
+        <option value="14">Slide 15</option>
+        <option value="15">Slide 16</option>
+        <option value="16">Slide 17</option>
+        <option value="17">Slide 18</option>
+        <option value="18">Slide 19</option>
+        <option value="19">Slide 20</option>
+        <option value="20">Slide 21</option>
+        <option value="21">Slide 22</option>
+        <option value="22">Slide 23</option>
       </select>
     </div>
 
-    <a href="index.html" class="back-link" aria-label="Return to homepage">← Back to Home</a>
-    <a href="test.html" class="back-link" aria-label="Return to previous page">← Back to Page</a>
+    <div class="nav-links">
+      <a href="index.html" class="back-link" aria-label="Return to homepage">← Back to Home</a>
+      <a href="cv.html" class="back-link" aria-label="Return to previous page">← Back to Page</a>
+      <a href="summary.html" class="next-link" aria-label="Go to next page">Next Page →</a>
+    </div>
   </div>
 
   <footer>
@@ -256,31 +283,16 @@
   </footer>
 
   <script>
-    let examCurrentSlide = 0;
     let schemeCurrentSlide = 0;
-    const examSlides = document.querySelectorAll('.exam-slide');
     const schemeSlides = document.querySelectorAll('.scheme-slide');
-    const examSlideshow = document.getElementById('examSlideshow');
     const schemeSlideshow = document.getElementById('schemeSlideshow');
-    const examSlideSelector = document.getElementById('examSlideSelector');
     const schemeSlideSelector = document.getElementById('schemeSlideSelector');
-    const examSlideNumberSelect = document.getElementById('examSlideNumber');
     const schemeSlideNumberSelect = document.getElementById('schemeSlideNumber');
 
     function showSlideshow(type) {
-      if (type === 'exam') {
-        examSlideshow.style.display = 'block';
-        examSlideSelector.style.display = 'block';
-        schemeSlideshow.style.display = 'none';
-        schemeSlideSelector.style.display = 'none';
-        showSlide('exam', examCurrentSlide);
-        examSlideNumberSelect.value = examCurrentSlide;
-        examSlideshow.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      } else if (type === 'scheme') {
+      if (type === 'scheme') {
         schemeSlideshow.style.display = 'block';
         schemeSlideSelector.style.display = 'block';
-        examSlideshow.style.display = 'none';
-        examSlideSelector.style.display = 'none';
         showSlide('scheme', schemeCurrentSlide);
         schemeSlideNumberSelect.value = schemeCurrentSlide;
         schemeSlideshow.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -288,8 +300,8 @@
     }
 
     function showSlide(type, index) {
-      const slides = type === 'exam' ? examSlides : schemeSlides;
-      const slideNumberSelect = type === 'exam' ? examSlideNumberSelect : schemeSlideNumberSelect;
+      const slides = schemeSlides;
+      const slideNumberSelect = schemeSlideNumberSelect;
       slides.forEach((slide, i) => {
         slide.classList.toggle('active', i === index);
       });
@@ -297,31 +309,23 @@
     }
 
     function changeSlide(type, direction) {
-      let currentSlide = type === 'exam' ? examCurrentSlide : schemeCurrentSlide;
-      const slides = type === 'exam' ? examSlides : schemeSlides;
+      let currentSlide = schemeCurrentSlide;
+      const slides = schemeSlides;
       currentSlide += direction;
       if (currentSlide < 0) {
         currentSlide = slides.length - 1;
       } else if (currentSlide >= slides.length) {
         currentSlide = 0;
       }
-      if (type === 'exam') {
-        examCurrentSlide = currentSlide;
-      } else {
-        schemeCurrentSlide = currentSlide;
-      }
+      schemeCurrentSlide = currentSlide;
       showSlide(type, currentSlide);
     }
 
     function jumpToSlide(type, slideNumber) {
       const currentSlide = parseInt(slideNumber);
-      const slides = type === 'exam' ? examSlides : schemeSlides;
+      const slides = schemeSlides;
       if (currentSlide >= 0 && currentSlide < slides.length) {
-        if (type === 'exam') {
-          examCurrentSlide = currentSlide;
-        } else {
-          schemeCurrentSlide = currentSlide;
-        }
+        schemeCurrentSlide = currentSlide;
         showSlide(type, currentSlide);
       }
     }
